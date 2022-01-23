@@ -4,25 +4,23 @@ namespace SingletonExerciseNet5
 {
     class Program
     {
-        public static TableServers host1List = TableServers.GetTableServers();
-        public static TableServers host2List = TableServers.GetTableServers();
+        public static TableServers host1 = TableServers.GetTableServers();
+        public static TableServers host2 = TableServers.GetTableServers();
         static void Main(string[] args)
         {
-            TableServers servers = TableServers.GetTableServers();
-
             for (int i = 0; i < 10; i++)
             {
-                Host1GetNextServer();
-                Host2GetNextServer();
+                Host1ForNextServer();
+                Host2ForNextServer();
             }
         }
-        public static void Host1GetNextServer()
+        public static void Host1ForNextServer()
         {
-            Console.WriteLine($"The next server is: {host1List.GetNextServer()} ");
+            Console.WriteLine($"The next server is: {host1.GetNextServer()} ");
         }
-        public static void Host2GetNextServer()
+        public static void Host2ForNextServer()
         {
-            Console.WriteLine($"The next server is: {host2List.GetNextServer()} ");
+            Console.WriteLine($"The next server is: {host2.GetNextServer()} ");
         }
     }
 }
