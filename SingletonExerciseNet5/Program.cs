@@ -16,11 +16,11 @@ namespace SingletonExerciseNet5
                 Host2GetNextServer();
             }
         }
-        public void Host1GetNextServer()
+        public static void Host1GetNextServer()
         {
             Console.WriteLine($"The next server is: {host1List.GetNextServer()} ");
         }
-        public void Host2GetNextServer()
+        public static void Host2GetNextServer()
         {
             Console.WriteLine($"The next server is: {host2List.GetNextServer()} ");
         }
